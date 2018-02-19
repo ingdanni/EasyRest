@@ -1,0 +1,16 @@
+PODS:
+  - EasyRest (0.1.0)
+
+DEPENDENCIES:
+  - EasyRest (from `../`)
+
+EXTERNAL SOURCES:
+  EasyRest:
+    :path: ../
+
+SPEC CHECKSUMS:
+  EasyRest: a8adc10bb80e9242e41814f1d3481a9a8f90e066
+
+PODFILE CHECKSUM: febefa130ff923edbd28db893e26fd89dd634a5e
+
+COCOAPODS: 1.4.0

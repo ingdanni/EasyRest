@@ -1,0 +1,730 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C8840A2FDC629CB764F4CE91D858F16 /* EasyRest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A0FD85BF3B36553428D92D91AF769ED4 /* EasyRest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		184F59F7BCC2B94A6BE5F8FA1F0DC5B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		1FD4184C6B8A3DA4F72D45B673427B37 /* EasyRest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A83E2033AC336A5A901D9685E13ABB5 /* EasyRest-dummy.m */; };
+		3A61EE3517C7D65D156DDD18A7AF61E1 /* Pods-EasyRest_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98D97324E9AB967B93F92DF398704DD4 /* Pods-EasyRest_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		554F77493FE3F9A1DE6F4E8A00850163 /* Pods-EasyRest_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88B152FCB535280D3390B3E297BA64DC /* Pods-EasyRest_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		991994FF5036237171D328D43AE9C10C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		99B063E6986417DB6558180C5C946F21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		9B8839B51E37278E036B82337CACDA33 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6424CAED19E5BFCDC869A6C6050D0F8 /* ReplaceMe.swift */; };
+		E5F3F61963636B2E0E5368057140DD43 /* Pods-EasyRest_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E152E4CCB48546134E17FA3928D313B2 /* Pods-EasyRest_Tests-dummy.m */; };
+		F295A9B9B9114547A1223C4976D33988 /* Pods-EasyRest_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90999CCDBA4943D15A78FE8DB0055B /* Pods-EasyRest_Example-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45852DCCD45AEF95D729654089952EEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9862A4EB0018EA8972050318AC86395;
+			remoteInfo = EasyRest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0493E2B7375A627C8642A4F6C7192A2F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BA4E18D006CE81F6B2B68D1E2819E73 /* EasyRest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EasyRest.modulemap; sourceTree = "<group>"; };
+		0ED882E4C73F1F559A437FA1664873C9 /* Pods_EasyRest_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EasyRest_Example.framework; path = "Pods-EasyRest_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		131FF221FA91141C08D2505BEC2E3E2C /* Pods-EasyRest_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EasyRest_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		14143E7900B6B32C1806E8413B6C3443 /* Pods-EasyRest_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EasyRest_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3A83E2033AC336A5A901D9685E13ABB5 /* EasyRest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EasyRest-dummy.m"; sourceTree = "<group>"; };
+		46A7C49409EBB26DA00255791BCBEDAE /* EasyRest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EasyRest.framework; path = EasyRest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4723E0C198EFD87878043FF6477BE1F6 /* Pods-EasyRest_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EasyRest_Example-frameworks.sh"; sourceTree = "<group>"; };
+		59974D9CAFA3EBD4EF95FC85B66E3421 /* Pods-EasyRest_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EasyRest_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5A5339CEDA8C80729D990B6FBAEC674D /* Pods_EasyRest_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EasyRest_Tests.framework; path = "Pods-EasyRest_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A90999CCDBA4943D15A78FE8DB0055B /* Pods-EasyRest_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EasyRest_Example-dummy.m"; sourceTree = "<group>"; };
+		60FB82EE9100F17838D30150931A8F5F /* Pods-EasyRest_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EasyRest_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		621FBA5F77BA172A20F58502BC422058 /* Pods-EasyRest_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EasyRest_Example.modulemap"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6C9DB48020E0476C4A9FCE837BAAF8DD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		8146153E4A23ECCBDB642106BC46FA7B /* Pods-EasyRest_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EasyRest_Tests.modulemap"; sourceTree = "<group>"; };
+		84C64DCA03A0C10E83BA3EFFF93AB1FE /* Pods-EasyRest_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EasyRest_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		88B152FCB535280D3390B3E297BA64DC /* Pods-EasyRest_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EasyRest_Example-umbrella.h"; sourceTree = "<group>"; };
+		8A6852AA7F6C81B71570DAC373D6587D /* Pods-EasyRest_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EasyRest_Example-resources.sh"; sourceTree = "<group>"; };
+		8B824884E1FC83390078DFA614B25EA2 /* Pods-EasyRest_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EasyRest_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8ED65EC4280CF06C40BFBDED10345C3D /* Pods-EasyRest_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EasyRest_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		93576AC387848D2A0EFB836CFA9F9514 /* EasyRest.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = EasyRest.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		98D97324E9AB967B93F92DF398704DD4 /* Pods-EasyRest_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EasyRest_Tests-umbrella.h"; sourceTree = "<group>"; };
+		A0FD85BF3B36553428D92D91AF769ED4 /* EasyRest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyRest-umbrella.h"; sourceTree = "<group>"; };
+		BB0DA0BFF1D343017725727C6ECF02DB /* Pods-EasyRest_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EasyRest_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C0EB61B775FC137029690FC9CB3E71BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C5211B8C86D4899FE591B07510542676 /* EasyRest-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyRest-prefix.pch"; sourceTree = "<group>"; };
+		C6424CAED19E5BFCDC869A6C6050D0F8 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = EasyRest/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		CC93857918E840A779B751147D7299C1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDA8DEA306BC4ABC4B59D7CD255ADE17 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D483B8E007EB907A39F9AAFA51D7EBC7 /* EasyRest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EasyRest.xcconfig; sourceTree = "<group>"; };
+		E0DDAB9543807E47DF917BA5A1819754 /* Pods-EasyRest_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EasyRest_Tests-resources.sh"; sourceTree = "<group>"; };
+		E152E4CCB48546134E17FA3928D313B2 /* Pods-EasyRest_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EasyRest_Tests-dummy.m"; sourceTree = "<group>"; };
+		F54DFFB3A49C00547232A7FE3B6E23F7 /* Pods-EasyRest_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EasyRest_Example.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		194B80E3321762CAB8AA535A8F9508B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				991994FF5036237171D328D43AE9C10C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C02FC66DCBE076D1DCE75FA2629EDD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99B063E6986417DB6558180C5C946F21 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81F3F1A4FFCB9E5969F0F7A934B448F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184F59F7BCC2B94A6BE5F8FA1F0DC5B0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25CFB3143792D27926F902C50E293752 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				93576AC387848D2A0EFB836CFA9F9514 /* EasyRest.podspec */,
+				C0EB61B775FC137029690FC9CB3E71BC /* LICENSE */,
+				6C9DB48020E0476C4A9FCE837BAAF8DD /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		3C0497156EA79EEB2BA4FFAF7266ECF9 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				828F7A995D0D1C08160A9283399F0D3C /* EasyRest */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		537162F201881BAD1620D4D3FCF9CE58 /* Pods-EasyRest_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0493E2B7375A627C8642A4F6C7192A2F /* Info.plist */,
+				8146153E4A23ECCBDB642106BC46FA7B /* Pods-EasyRest_Tests.modulemap */,
+				59974D9CAFA3EBD4EF95FC85B66E3421 /* Pods-EasyRest_Tests-acknowledgements.markdown */,
+				BB0DA0BFF1D343017725727C6ECF02DB /* Pods-EasyRest_Tests-acknowledgements.plist */,
+				E152E4CCB48546134E17FA3928D313B2 /* Pods-EasyRest_Tests-dummy.m */,
+				131FF221FA91141C08D2505BEC2E3E2C /* Pods-EasyRest_Tests-frameworks.sh */,
+				E0DDAB9543807E47DF917BA5A1819754 /* Pods-EasyRest_Tests-resources.sh */,
+				98D97324E9AB967B93F92DF398704DD4 /* Pods-EasyRest_Tests-umbrella.h */,
+				60FB82EE9100F17838D30150931A8F5F /* Pods-EasyRest_Tests.debug.xcconfig */,
+				8ED65EC4280CF06C40BFBDED10345C3D /* Pods-EasyRest_Tests.release.xcconfig */,
+			);
+			name = "Pods-EasyRest_Tests";
+			path = "Target Support Files/Pods-EasyRest_Tests";
+			sourceTree = "<group>";
+		};
+		645B5B397345B5CECF021A3BE2CB4706 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46A7C49409EBB26DA00255791BCBEDAE /* EasyRest.framework */,
+				0ED882E4C73F1F559A437FA1664873C9 /* Pods_EasyRest_Example.framework */,
+				5A5339CEDA8C80729D990B6FBAEC674D /* Pods_EasyRest_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				3C0497156EA79EEB2BA4FFAF7266ECF9 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				645B5B397345B5CECF021A3BE2CB4706 /* Products */,
+				8412348281980184F5CC9A5F61E5EA3A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		828F7A995D0D1C08160A9283399F0D3C /* EasyRest */ = {
+			isa = PBXGroup;
+			children = (
+				C6424CAED19E5BFCDC869A6C6050D0F8 /* ReplaceMe.swift */,
+				25CFB3143792D27926F902C50E293752 /* Pod */,
+				B17C142836330EF51BEE1E4DF55FEFB9 /* Support Files */,
+			);
+			name = EasyRest;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		8412348281980184F5CC9A5F61E5EA3A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFAA26D10CE6CF0AEBFB2CC86A1A35B6 /* Pods-EasyRest_Example */,
+				537162F201881BAD1620D4D3FCF9CE58 /* Pods-EasyRest_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B17C142836330EF51BEE1E4DF55FEFB9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0BA4E18D006CE81F6B2B68D1E2819E73 /* EasyRest.modulemap */,
+				D483B8E007EB907A39F9AAFA51D7EBC7 /* EasyRest.xcconfig */,
+				3A83E2033AC336A5A901D9685E13ABB5 /* EasyRest-dummy.m */,
+				C5211B8C86D4899FE591B07510542676 /* EasyRest-prefix.pch */,
+				A0FD85BF3B36553428D92D91AF769ED4 /* EasyRest-umbrella.h */,
+				CDA8DEA306BC4ABC4B59D7CD255ADE17 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/EasyRest";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FFAA26D10CE6CF0AEBFB2CC86A1A35B6 /* Pods-EasyRest_Example */ = {
+			isa = PBXGroup;
+			children = (
+				CC93857918E840A779B751147D7299C1 /* Info.plist */,
+				621FBA5F77BA172A20F58502BC422058 /* Pods-EasyRest_Example.modulemap */,
+				8B824884E1FC83390078DFA614B25EA2 /* Pods-EasyRest_Example-acknowledgements.markdown */,
+				84C64DCA03A0C10E83BA3EFFF93AB1FE /* Pods-EasyRest_Example-acknowledgements.plist */,
+				5A90999CCDBA4943D15A78FE8DB0055B /* Pods-EasyRest_Example-dummy.m */,
+				4723E0C198EFD87878043FF6477BE1F6 /* Pods-EasyRest_Example-frameworks.sh */,
+				8A6852AA7F6C81B71570DAC373D6587D /* Pods-EasyRest_Example-resources.sh */,
+				88B152FCB535280D3390B3E297BA64DC /* Pods-EasyRest_Example-umbrella.h */,
+				F54DFFB3A49C00547232A7FE3B6E23F7 /* Pods-EasyRest_Example.debug.xcconfig */,
+				14143E7900B6B32C1806E8413B6C3443 /* Pods-EasyRest_Example.release.xcconfig */,
+			);
+			name = "Pods-EasyRest_Example";
+			path = "Target Support Files/Pods-EasyRest_Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8A55505E523D1F6622116EB25A8BDBF1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C8840A2FDC629CB764F4CE91D858F16 /* EasyRest-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF7B3E8BC923A5D6EE9E493038A1234E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A61EE3517C7D65D156DDD18A7AF61E1 /* Pods-EasyRest_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C65A1012987821886F1D2059FC82FBE9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				554F77493FE3F9A1DE6F4E8A00850163 /* Pods-EasyRest_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0D2D2F05E44F9C83E59C620D9488842F /* Pods-EasyRest_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C5E424FBCB2BB29601BF0939E49A71F /* Build configuration list for PBXNativeTarget "Pods-EasyRest_Tests" */;
+			buildPhases = (
+				885346466CE2F7666E3C645973F71F19 /* Sources */,
+				194B80E3321762CAB8AA535A8F9508B3 /* Frameworks */,
+				BF7B3E8BC923A5D6EE9E493038A1234E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-EasyRest_Tests";
+			productName = "Pods-EasyRest_Tests";
+			productReference = 5A5339CEDA8C80729D990B6FBAEC674D /* Pods_EasyRest_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		448CA3E44DB5ADD6FF58156FB59CB461 /* Pods-EasyRest_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC8AF7D3C6052CCDF043C29A2B7254BF /* Build configuration list for PBXNativeTarget "Pods-EasyRest_Example" */;
+			buildPhases = (
+				2EDB909F1577FFC5563760E9DD0B0ED9 /* Sources */,
+				81F3F1A4FFCB9E5969F0F7A934B448F6 /* Frameworks */,
+				C65A1012987821886F1D2059FC82FBE9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69F156783676CF98518DEC9556EB8452 /* PBXTargetDependency */,
+			);
+			name = "Pods-EasyRest_Example";
+			productName = "Pods-EasyRest_Example";
+			productReference = 0ED882E4C73F1F559A437FA1664873C9 /* Pods_EasyRest_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E9862A4EB0018EA8972050318AC86395 /* EasyRest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E8928223B3BCE35F8FAEC4E7E9C1306 /* Build configuration list for PBXNativeTarget "EasyRest" */;
+			buildPhases = (
+				2313A67428C53C412788FB49BA75E7E1 /* Sources */,
+				2C02FC66DCBE076D1DCE75FA2629EDD7 /* Frameworks */,
+				8A55505E523D1F6622116EB25A8BDBF1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyRest;
+			productName = EasyRest;
+			productReference = 46A7C49409EBB26DA00255791BCBEDAE /* EasyRest.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 645B5B397345B5CECF021A3BE2CB4706 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9862A4EB0018EA8972050318AC86395 /* EasyRest */,
+				448CA3E44DB5ADD6FF58156FB59CB461 /* Pods-EasyRest_Example */,
+				0D2D2F05E44F9C83E59C620D9488842F /* Pods-EasyRest_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2313A67428C53C412788FB49BA75E7E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FD4184C6B8A3DA4F72D45B673427B37 /* EasyRest-dummy.m in Sources */,
+				9B8839B51E37278E036B82337CACDA33 /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EDB909F1577FFC5563760E9DD0B0ED9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F295A9B9B9114547A1223C4976D33988 /* Pods-EasyRest_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		885346466CE2F7666E3C645973F71F19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5F3F61963636B2E0E5368057140DD43 /* Pods-EasyRest_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69F156783676CF98518DEC9556EB8452 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EasyRest;
+			target = E9862A4EB0018EA8972050318AC86395 /* EasyRest */;
+			targetProxy = 45852DCCD45AEF95D729654089952EEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		439A57B81595F29F84E20FB991F5F54C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D483B8E007EB907A39F9AAFA51D7EBC7 /* EasyRest.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EasyRest/EasyRest-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EasyRest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EasyRest/EasyRest.modulemap";
+				PRODUCT_NAME = EasyRest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4C0B4F2D64CA4415B7D6DE261C8C8CBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D483B8E007EB907A39F9AAFA51D7EBC7 /* EasyRest.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EasyRest/EasyRest-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EasyRest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EasyRest/EasyRest.modulemap";
+				PRODUCT_NAME = EasyRest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5011B865762FC0C0A28ECEC4CB63DC68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5120B7E0001E2D66180A6EEBA8829E83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F54DFFB3A49C00547232A7FE3B6E23F7 /* Pods-EasyRest_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EasyRest_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EasyRest_Example/Pods-EasyRest_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EasyRest_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		827269710C98D60C14D46BC6AF9BF728 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		85EA4E11BF26B7BF47D6D38D56D07178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14143E7900B6B32C1806E8413B6C3443 /* Pods-EasyRest_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EasyRest_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EasyRest_Example/Pods-EasyRest_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EasyRest_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D0BEF05DCF8193C9AF3E6948C1D7DC57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60FB82EE9100F17838D30150931A8F5F /* Pods-EasyRest_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EasyRest_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EasyRest_Tests/Pods-EasyRest_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EasyRest_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DD6BC68D51E1C2D852A85416ECF03C57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ED65EC4280CF06C40BFBDED10345C3D /* Pods-EasyRest_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EasyRest_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EasyRest_Tests/Pods-EasyRest_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_EasyRest_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C5E424FBCB2BB29601BF0939E49A71F /* Build configuration list for PBXNativeTarget "Pods-EasyRest_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0BEF05DCF8193C9AF3E6948C1D7DC57 /* Debug */,
+				DD6BC68D51E1C2D852A85416ECF03C57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5011B865762FC0C0A28ECEC4CB63DC68 /* Debug */,
+				827269710C98D60C14D46BC6AF9BF728 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E8928223B3BCE35F8FAEC4E7E9C1306 /* Build configuration list for PBXNativeTarget "EasyRest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				439A57B81595F29F84E20FB991F5F54C /* Debug */,
+				4C0B4F2D64CA4415B7D6DE261C8C8CBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC8AF7D3C6052CCDF043C29A2B7254BF /* Build configuration list for PBXNativeTarget "Pods-EasyRest_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5120B7E0001E2D66180A6EEBA8829E83 /* Debug */,
+				85EA4E11BF26B7BF47D6D38D56D07178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
