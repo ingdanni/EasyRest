@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'EasyRest_Example' do
+  pod 'EasyRest', :path => '../'
+
+  target 'EasyRest_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
