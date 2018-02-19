@@ -7,17 +7,39 @@
 //
 
 import UIKit
+import EasyRest
+
+class API {
+    
+    static let shared = API()
+    
+    private init() {}
+    
+    let posts = Entity(name: "posts")
+    
+}
+
+struct Post: Codable {
+    var title: String
+    var body: String
+}
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        API.shared.posts.get(as: [Post].self) {
+            data, error in
+            
+            if let data = data {
+                print(data)
+            }
+            
+            if let error = error {
+                print(error)
+            }
+        }
     }
 
 }

@@ -28,9 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0868D66F792E1CE1FFD1BC42 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		0868D66F792E1CE1FFD1BC42 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		0BA9FB084B92DF39C73FEDAB /* Pods_EasyRest_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyRest_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		42EA466018F6CFE7BF280A1F /* EasyRest.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = EasyRest.podspec; path = ../EasyRest.podspec; sourceTree = "<group>"; };
+		42EA466018F6CFE7BF280A1F /* EasyRest.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EasyRest.podspec; path = ../EasyRest.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5824007360BD256E9A75380F /* Pods-EasyRest_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyRest_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyRest_Example/Pods-EasyRest_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* EasyRest_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyRest_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		671EC6A62CD77E787041FF13 /* Pods_EasyRest_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyRest_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93854AA3F7CAE6E44E41AC0B /* Pods-EasyRest_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyRest_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyRest_Example/Pods-EasyRest_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B562D12683E0AC14918D80B6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B562D12683E0AC14918D80B6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		BA955850851FF20E9C74D090 /* Pods-EasyRest_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyRest_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyRest_Tests/Pods-EasyRest_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E377BF96A7693BA0BA37FFE1 /* Pods-EasyRest_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyRest_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyRest_Tests/Pods-EasyRest_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -286,10 +286,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EasyRest_Example/Pods-EasyRest_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/EasyRest/EasyRest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyRest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
