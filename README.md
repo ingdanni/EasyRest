@@ -1,29 +1,43 @@
 # EasyRest
 
-[![CI Status](http://img.shields.io/travis/ingdanni/EasyRest.svg?style=flat)](https://travis-ci.org/ingdanni/EasyRest)
-[![Version](https://img.shields.io/cocoapods/v/EasyRest.svg?style=flat)](http://cocoapods.org/pods/EasyRest)
-[![License](https://img.shields.io/cocoapods/l/EasyRest.svg?style=flat)](http://cocoapods.org/pods/EasyRest)
-[![Platform](https://img.shields.io/cocoapods/p/EasyRest.svg?style=flat)](http://cocoapods.org/pods/EasyRest)
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-EasyRest is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+Add to Podfile
 
 ```ruby
-pod 'EasyRest'
+pod 'EasyRest', :git => 'https://github.com/ingdanni/EasyRest'
 ```
 
-## Author
+In the `AppDelegate` file, add configuration in `didFinishLaunchingWithOptions` method:
 
-ingdanni, ing.danni@gmail.com
+```swift
+APIManager.shared.baseUrl = "https://jsonplaceholder.typicode.com"
+```
 
-## License
+### Create API class
 
-EasyRest is available under the MIT license. See the LICENSE file for more info.
+```swift
+class API {
+
+    static let shared = API()
+
+    private init() {}
+
+    let posts = Entity(name: "posts")
+
+}
+```
+
+### Make a request
+
+```swift
+API.shared.posts.get {
+            data, error in
+
+            if let data = data {
+                print(data)
+            }
+
+            if let error = error {
+                print(error)
+            }
+        }
+```
