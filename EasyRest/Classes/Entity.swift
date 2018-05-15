@@ -45,21 +45,21 @@ public class Entity: Restful {
     
     /// Executes an HTTP GET request
     /// - parameter completion: Closure that takes response's data and error string
-    public func get(completion: @escaping (Data?, String?) -> Void) {
+    public func get(completion: @escaping (Data?, APIError?) -> Void) {
         fetch(url: url, method: HTTPMethod.get) { completion($0, $1) }
     }
     
     /// Executes an HTTP GET request
     /// - parameter type:       Codable object type for parsing response
     /// - parameter completion: Closure that takes response's data and error string
-    public func get<D>(as type: D.Type, completion: @escaping (D?, String?) -> Void) where D : Decodable {
+    public func get<D>(as type: D.Type, completion: @escaping (D?, APIError?) -> Void) where D : Decodable {
         fetchAndParse(url: url, method: HTTPMethod.get, as: type) { completion($0, $1) }
     }
     
     /// Executes an HTTP GET request
     /// - parameter id:         Entity id
     /// - parameter completion: Closure that takes response's data and error string
-    public func get<T>(_ id: T, completion: @escaping (Data?, String?) -> Void) {
+    public func get<T>(_ id: T, completion: @escaping (Data?, APIError?) -> Void) {
         let _url = "\(url)/\(id)"
         fetch(url: _url, method: HTTPMethod.get, body: nil) { completion($0, $1) }
     }
@@ -68,7 +68,7 @@ public class Entity: Restful {
     /// - parameter id:         Entity id
     /// - parameter type:       Codable object type for parsing response
     /// - parameter completion: Closure that takes response's data and error string
-    public func get<T, D>(_ id: T, as type: D.Type, completion: @escaping (D?, String?) -> Void) where D : Decodable {
+    public func get<T, D>(_ id: T, as type: D.Type, completion: @escaping (D?, APIError?) -> Void) where D : Decodable {
         let _url = "\(url)/\(id)"
         fetchAndParse(url: _url, method: HTTPMethod.get, as: type) { completion($0, $1) }
     }
@@ -76,25 +76,28 @@ public class Entity: Restful {
     // MARK: - POST methods
     
     /// Executes HTTP POST request
-    public func post<E: Codable>(_ body: E, completion: @escaping (Data?, String?) -> Void) {
+    public func post<E: Codable>(_ body: E, completion: @escaping (Data?, APIError?) -> Void) {
         fetch(url: url, method: .post, body: body.dictionary) { completion($0, $1) }
     }
     
     /// Executes HTTP POST request
-    public func post<E: Codable, D: Decodable>(_ body: E, as type: D.Type, completion: @escaping (D?, String?)-> Void) {
+    public func post<E: Codable, D: Decodable>(_ body: E, as type: D.Type, completion: @escaping (D?, APIError?)-> Void) {
         fetchAndParse(url: url, method: .post, body: body.dictionary, as: type) { completion($0, $1) }
     }
     
     // MARK: - PUT methods
     
     /// Executes HTTP PUT request
-    public func put<T, E>(_ id: T, body: E, completion: @escaping (Data?, String?) -> Void) where E : Decodable, E : Encodable {
+    public func put<T, E>(_ id: T, body: E,
+                          completion: @escaping (Data?, APIError?) -> Void) where E : Decodable, E : Encodable {
         let _url = "\(url)/\(id)"
         fetch(url: _url, method: .put, body: body.dictionary) { completion($0, $1) }
     }
     
     /// Executes HTTP PUT request
-    public func put<T, E, D>(_ id: T, body: E, as type: D.Type, completion: @escaping (D?, String?) -> Void) where E : Decodable, E : Encodable, D : Decodable {
+    public func put<T, E, D>(_ id: T, body: E, as type: D.Type,
+                             completion: @escaping (D?, APIError?) -> Void) where E : Decodable, E : Encodable, D : Decodable {
+        
         let _url = "\(url)/\(id)"
         fetchAndParse(url: _url, method: .put, body: body.dictionary, as: type) { completion($0, $1) }
     }
@@ -102,13 +105,15 @@ public class Entity: Restful {
     // MARK: DELETE methods
     
     /// Executes HTTP DELETE request
-    public func delete<T>(_ id: T, completion: @escaping (Data?, String?) -> Void) {
+    public func delete<T>(_ id: T, completion: @escaping (Data?, APIError?) -> Void) {
         let _url = "\(url)/\(id)"
         fetch(url: _url, method: .delete) { completion($0, $1) }
     }
     
     /// Executes HTTP DELETE request
-    public func delete<T, D>(_ id: T, as type: D.Type, completion: @escaping (D?, String?) -> Void) where D : Decodable {
+    public func delete<T, D>(_ id: T, as type: D.Type,
+                             completion: @escaping (D?, APIError?) -> Void) where D : Decodable {
+        
         let _url = "\(url)/\(id)"
         fetchAndParse(url: _url, method: .delete, as: type) { completion($0, $1) }
     }
@@ -124,17 +129,25 @@ extension Entity {
     /// - parameter method:     HTTP method
     /// - parameter body:       A dictionary containing request's body
     /// - parameter completion: Escaping closure containing data and errors
-    public func fetch(url: String, method: HTTPMethod, body: Parameters? = nil, completion: @escaping (Data?, String?) -> Void) {
+    public func fetch(url: String,
+                      method: HTTPMethod,
+                      body: Parameters? = nil,
+                      completion: @escaping (Data?, APIError?) -> Void) {
+        
         alamofire.request(url, method: method, parameters: body, encoding: JSONEncoding.default)
-            .validate()
+            .validate(statusCode: 200..<300)
             .responseJSON {
                 response in
                 switch response.result {
                 case .success(_):
                     completion(response.data, nil)
-                case .failure(_):
-                    let err = self.APIError(response.response!.statusCode)
-                    completion(nil, err)
+                case .failure(let error):
+                    if let res = response.response {
+                        let err: APIError = (res.statusCode, error.localizedDescription)
+                        completion(nil, err)
+                    } else {
+                        completion(nil, (911, error.localizedDescription))
+                    }
                 }
         }
     }
@@ -145,7 +158,12 @@ extension Entity {
     /// - parameter body:       A dictionary containing request's body
     /// - parameter as:         Codable type for response
     /// - parameter completion: Escaping closure containing data and errors
-    public func fetchAndParse<D>(url: String, method: HTTPMethod, body: Parameters? = nil, as type: D.Type, completion: @escaping (D?, String?) -> Void) where D : Decodable {
+    public func fetchAndParse<D>(url: String,
+                                 method: HTTPMethod,
+                                 body: Parameters? = nil,
+                                 as type: D.Type,
+                                 completion: @escaping (D?, APIError?) -> Void) where D : Decodable {
+        
         alamofire.request(url, method: method, parameters: body, encoding: JSONEncoding.default)
             .validate()
             .responseJSON {
@@ -153,37 +171,21 @@ extension Entity {
                 switch response.result {
                 case .success(_):
                     let decoder = JSONDecoder()
+                    
                     do {
                         let row = try decoder.decode(type, from: response.data!)
                         completion(row, nil)
                     } catch {
-                        let err = self.APIError(777)
-                        completion(nil, err)
+                        completion(nil, (777, error.localizedDescription))
                     }
-                case .failure(_):
-                    let err = self.APIError(response.response!.statusCode)
-                    completion(nil, err)
+                case .failure(let error):
+                    if let res = response.response {
+                        let err: APIError = (res.statusCode, error.localizedDescription)
+                        completion(nil, err)
+                    } else {
+                        completion(nil, (911, error.localizedDescription))
+                    }
                 }
-        }
-    }
-    
-    // TODO: - Process API errors
-    
-    /// Process errors code into a custom description
-    /// - parameter code: HTTP request status code
-    /// - returns: Flat string containing error description
-    public func APIError(_ code: Int) -> String {
-        switch code {
-        case 200, 201, 202:
-            return "Request was processed succesfully"
-        case 400, 401, 403, 404:
-            return "Could not find any data"
-        case 500, 501, 502, 505:
-            return "There was an unexpected error"
-        case 777:
-            return "Parsing error"
-        default:
-            return "An error ocurred"
         }
     }
     
@@ -201,8 +203,9 @@ extension Entity {
     /// - parameter routeParams:        An array of generic types
     /// - parameter queryParams:        An array of generic types (could be nil)
     /// - parameter completion:         A closure containing request response and errors
-    public func query<T>(_ routeParams: [T], queryParams: [String: T]? = nil, completion: @escaping (Data?, String?) -> Void) {
-        var params = routeParams.flatMap({"\($0)"}).joined(separator: "/")
+    public func query<T>(_ routeParams: [T], queryParams: [String: T]? = nil, completion: @escaping (Data?, APIError?) -> Void) {
+        
+        var params = routeParams.compactMap({"\($0)"}).joined(separator: "/")
         if let queryParams = queryParams { params.append(transform(queryParams)) }
         let customUrl = "\(url)/\(params)"
         fetch(url: customUrl, method: .get) { completion($0, $1) }
@@ -213,8 +216,9 @@ extension Entity {
     /// - parameter queryParams:        An array of generic types (could be nil)
     /// - parameter type:               Codable object type for parsing response
     /// - parameter completion:         A closure containing request response and errors
-    public func query<T, D: Decodable>(_ routeParams: [T], queryParams: [String: T]? = nil, as type: D.Type, completion: @escaping (D?, Any?)-> Void) {
-        var params = routeParams.flatMap({"\($0)"}).joined(separator: "/")
+    public func query<T, D: Decodable>(_ routeParams: [T], queryParams: [String: T]? = nil, as type: D.Type, completion: @escaping (D?, APIError?)-> Void) {
+        
+        var params = routeParams.compactMap({"\($0)"}).joined(separator: "/")
         if let queryParams = queryParams { params.append(transform(queryParams)) }
         let customUrl = "\(url)/\(params)"
         fetchAndParse(url: customUrl, method: .get, as: type) { completion($0,$1) }

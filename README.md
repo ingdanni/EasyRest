@@ -30,14 +30,14 @@ class API {
 
 ```swift
 API.shared.posts.get {
-            data, error in
+    data, error in
 
-            if let data = data {
-                print(data)
-            }
+    if let data = data {
+        print(data)
+    }
 
-            if let error = error {
-                print(error)
-            }
-        }
+    if let error = error {
+        print(error)
+    }
+}
 ```

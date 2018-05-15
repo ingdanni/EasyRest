@@ -16,6 +16,7 @@ class API {
     private init() {}
     
     let posts = Entity(name: "posts")
+    let users = Entity(name: "user") // will cause error
     
 }
 
@@ -37,7 +38,24 @@ class ViewController: UIViewController {
             }
             
             if let error = error {
+                print(error.1)
+            }
+        }
+        
+        API.shared.users.get {
+            data, error in
+            
+            if let error = error {
                 print(error)
+            }
+            
+        }
+        
+        API.shared.posts.get(1, as: Post.self) {
+            data, error in
+            
+            if let data = data {
+                print(data)
             }
         }
     }

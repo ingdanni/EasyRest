@@ -9,24 +9,24 @@
 import Foundation
 
 /// A tuple containg HTTP request response and error string
-//public typealias DataResponse = (Data?, String?) -> Void
+public typealias APIError = (Int, String)
 
 /// Restful protocol with HTTP default methods
 public protocol Restful {
     
-    func get(completion: @escaping (Data?, String?) -> Void)
-    func get<D: Decodable>(as type: D.Type, completion: @escaping (D?, String?)-> Void)
-    func get<T>(_ id: T, completion: @escaping (Data?, String?) -> Void)
-    func get<T, D: Decodable>(_ id: T, as type: D.Type, completion: @escaping (D?, String?)-> Void)
+    func get(completion: @escaping (Data?, APIError?) -> Void)
+    func get<D: Decodable>(as type: D.Type, completion: @escaping (D?, APIError?)-> Void)
+    func get<T>(_ id: T, completion: @escaping (Data?, APIError?) -> Void)
+    func get<T, D: Decodable>(_ id: T, as type: D.Type, completion: @escaping (D?, APIError?)-> Void)
     
-    func post<E: Codable>(_ body: E, completion: @escaping (Data?, String?) -> Void)
-    func post<E: Codable, D: Decodable>(_ body: E, as type: D.Type, completion: @escaping (D?, String?)-> Void)
+    func post<E: Codable>(_ body: E, completion: @escaping (Data?, APIError?) -> Void)
+    func post<E: Codable, D: Decodable>(_ body: E, as type: D.Type, completion: @escaping (D?, APIError?)-> Void)
     
-    func put<T, E: Codable>(_ id: T, body: E, completion: @escaping (Data?, String?) -> Void)
-    func put<T, E: Codable, D: Decodable>(_ id: T, body: E, as type: D.Type, completion: @escaping (D?, String?)-> Void)
+    func put<T, E: Codable>(_ id: T, body: E, completion: @escaping (Data?, APIError?) -> Void)
+    func put<T, E: Codable, D: Decodable>(_ id: T, body: E, as type: D.Type, completion: @escaping (D?, APIError?)-> Void)
     
-    func delete<T>(_ id: T,completion: @escaping (Data?, String?) -> Void)
-    func delete<T, D: Decodable>(_ id: T, as type: D.Type, completion: @escaping (D?, String?)-> Void)
+    func delete<T>(_ id: T,completion: @escaping (Data?, APIError?) -> Void)
+    func delete<T, D: Decodable>(_ id: T, as type: D.Type, completion: @escaping (D?, APIError?)-> Void)
     
 }
 
@@ -37,6 +37,7 @@ extension Encodable {
         guard let data = try? JSONEncoder().encode(self) else {
             return nil
         }
+        
         return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: AnyObject] }
     }
 }
