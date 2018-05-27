@@ -38,7 +38,8 @@ class ViewController: UIViewController {
             }
             
             if let error = error {
-                print(error.1)
+                print(error.message)
+                print(error.code)
             }
         }
         

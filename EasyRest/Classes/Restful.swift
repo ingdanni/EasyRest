@@ -9,7 +9,7 @@
 import Foundation
 
 /// A tuple containg HTTP request response and error string
-public typealias APIError = (Int, String)
+public typealias APIError = (code: Int, message: String)
 
 /// Restful protocol with HTTP default methods
 public protocol Restful {
